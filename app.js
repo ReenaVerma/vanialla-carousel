@@ -1,12 +1,15 @@
 document.addEventListener('DOMContentLoaded', function() {
   console.log('app.js loaded');
 
+  const pixabayAPIService = PixabayAPIService();
   const carouselContainer = document.getElementById('carousel-container');
   const previousButton    = document.getElementById('previous');
   const nextButton        = document.getElementById('next');
   let count               = 0;
 
   console.log('count', count);
+
+  pixabayAPIService.getImages();
 
   slideImages = (direction) => {
     const totalChildren = carouselContainer.getElementsByTagName('div').length;
