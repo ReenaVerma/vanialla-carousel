@@ -1,0 +1,43 @@
+
+.home-product-new-hldr {
+    position: relative;
+    /* width:1140px; */
+    border: 3px solid black;
+    width: 800px;
+}
+
+.carousel-container {
+    width: 800px;
+    /* width:1140px; */
+    overflow:hidden;
+    border: 3px solid red;
+  }
+
+.items-container {
+    border: 3px solid green;
+    width: 800px;
+    height: 200px;
+    margin: 0 auto;
+    display: flex;
+    /* overflow: hidden; */
+    transition:-ms-transform 0.5s ease 0s, -webkit-transform 0.5s ease 0s, transform 0.5s ease 0s;
+    position:relative;
+    white-space:nowrap;
+    
+}
+
+.item {
+    border: 3px solid green;
+    width: 200px;
+    /* height: 180px; */
+    margin: 0 auto;
+    display: inline-block;
+    vertical-align: top;
+    /* width:274px; */
+    justify-content: space-between;
+    
+}
+
+#one, #two {
+    background: no-repeat;
+}
