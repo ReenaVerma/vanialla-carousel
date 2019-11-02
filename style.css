@@ -1,8 +1,7 @@
-
 .home-product-new-hldr {
     position: relative;
     /* width:1140px; */
-    border: 3px solid black;
+    border: 0px solid black;
     width: 800px;
 }
 
@@ -10,7 +9,7 @@
     width: 800px;
     /* width:1140px; */
     overflow:hidden;
-    border: 3px solid red;
+    border: 1px solid red;
   }
 
 .items-container {
@@ -20,14 +19,14 @@
     margin: 0 auto;
     display: flex;
     /* overflow: hidden; */
-    transition:-ms-transform 0.5s ease 0s, -webkit-transform 0.5s ease 0s, transform 0.5s ease 0s;
+    
     position:relative;
     white-space:nowrap;
     
 }
 
 .item {
-    border: 3px solid green;
+    border: 0px solid green;
     width: 200px;
     /* height: 180px; */
     margin: 0 auto;
@@ -36,6 +35,14 @@
     /* width:274px; */
     justify-content: space-between;
     
+}
+
+.horizTranslate {
+    -webkit-transition: 3s;
+    -moz-transition: 3s;
+    -ms-transition: 3s;
+    -o-transition: 3s;
+    transition: 3s;
 }
 
 #one, #two {
