@@ -9,7 +9,9 @@ document.addEventListener('DOMContentLoaded', function() {
 
   console.log('count', count);
 
-  pixabayAPIService.getImages();
+  pixabayAPIService.getImages(carouselContainer);
+
+
 
   slideImages = (direction) => {
     const totalChildren = carouselContainer.getElementsByTagName('div').length;
@@ -23,14 +25,20 @@ document.addEventListener('DOMContentLoaded', function() {
     carouselContainer.classList.add("slideOutLeft")
 
     previousButton.style.display = count < 0 ? 'block' : 'none';
-    nextButton.style.display = count > 4 - totalChildren ? 'block' : 'none';
+    nextButton.style.display = count > 5 - totalChildren ? 'block' : 'none';
   }
 
   previousButton.addEventListener('click', event => {
-      slideImages('left');
+    event.preventDefault();
+    slideImages('left');
   });
 
   nextButton.addEventListener('click', event => {
-      slideImages('right');
+    event.preventDefault();
+    slideImages('right');
   });
+
+  if (count === -1) {
+
+  }
 });
