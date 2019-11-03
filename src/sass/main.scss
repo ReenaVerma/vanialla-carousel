@@ -1,1 +1,6 @@
-@import "components/base"
+$light-green: #eaeee7;
+$brand-blue: #3f719d;
+
+@import "components/base";
+@import "components/fonts";
+@import "components/buttons"

@@ -6,12 +6,12 @@ document.addEventListener('DOMContentLoaded', function() {
 	domService.getViewPortWidth().addListener(domService.checkViewPortWidth())
   
 	domService.getPreviousButton().addEventListener('click', event => {
-	  event.preventDefault();
+	//   event.preventDefault();
 	  domService.slideImages('left');
 	});
   
 	domService.getNextButton().addEventListener('click', event => {
-	  event.preventDefault();
+	//   event.preventDefault();
 	  domService.slideImages('right');
 	  getMostCentered();
 	});

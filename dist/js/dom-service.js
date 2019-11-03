@@ -31,6 +31,14 @@ function DOMService() {
         direction === 'left' ? count ++ : count --;
         itemsContainer.classList.add('horizTranslate');
         itemsContainer.classList.add("slideOutLeft")
+
+        // if (count < 0) {
+        //     previousButton.removeAttribute("disabled");
+        // }
+        // else {
+        //     previousButton.setAttribute("disabled");
+        // }
+   
         previousButton.style.display = count < 0 ? 'block' : 'none';
         nextButton.style.display = count > 5 - totalChildren ? 'block' : 'none';
         checkViewPortWidth(viewPortWidth);

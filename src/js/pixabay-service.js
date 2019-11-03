@@ -3,7 +3,7 @@ function PixabayAPIService() {
     const apikey    = 'a4094594c34f9ac14c7fc4c39';
 
     function getImages(carouselContainer) {
-      fetch(`${searchURL}?key=9656065-${apikey}&q=manhattan&image_type=photo&page=1&per_page=10`)
+      fetch(`${searchURL}?key=9656065-${apikey}&q=manhattan&image_type=photo&page=1&per_page=9`)
         .then((res) => {
           return res.json();
         })
@@ -17,11 +17,15 @@ function PixabayAPIService() {
             result +=
                     `<div class="item">
                        <img src="${elem.largeImageURL}" />
-                       <p>poster: ${elem.user}</p>
-                       <p>tags: ${elem.tags}
+                       <p><strong>poster:</strong> <br />${elem.user}</p>
+                       <p><strong>tags:</strong> <br />${elem.tags}
                      </div>`;
             carouselContainer.innerHTML = result;
           });
+
+          const backGroundImage = data.hits[1].largeImageURL;
+          document.getElementById('header').style.backgroundImage = `linear-gradient(to bottom, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.7)), url(${backGroundImage})`;
+          document.getElementById('header').style.backgroundRepeat = 'no-repeat';
         });
     }
 
