@@ -5,32 +5,27 @@
     <title>Carousel</title>
     <script src="pixabay-service.js" charset="utf-8"></script>
     <script src="dom-service.js" charset="utf-8"></script>
+    <script src="calculations.js" charset="utf-8"></script>
     <script src="app.js" charset="utf-8"></script>
     <link rel="stylesheet" href="style.css">
-
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
   </head>
 
   <body>
-
     <main>
       <h1>Carousel</h1>
-
-
       <div class="frame">
-      <div class="carousel-container" id="test">
-      <section class="items-container" id="carousel-container" style="left: 0px; border: 1px solid red";>
-      </section>
-    </div>
-  </div>
-
-  <section>
-      <button id="previous" style="display: none;">left</button>
-      <button id="next" style="display: block;">right</button>
-    </section>
-
-  </main>
-
+        <div class="carousel-container" id="carousel-container">
+          <section class="items-container" id="items-container" style="left: 0px; border: 1px solid red";>
+          <!-- API images returned here -->
+          </section>
+        </div>
+      </div>
+      <section>
+        <button id="previous" style="display: none;">left</button>
+        <button id="next" style="display: block;">right</button>
+     </section>
+    </main>
   </body>
 </html>

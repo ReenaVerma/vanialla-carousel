@@ -3,7 +3,7 @@ function PixabayAPIService() {
     const apikey    = 'a4094594c34f9ac14c7fc4c39';
 
     function getImages(carouselContainer) {
-      fetch(`${searchURL}?key=9656065-${apikey}&q=beautiful+landscape&image_type=photo&page=1&per_page=10`)
+      fetch(`${searchURL}?key=9656065-${apikey}&q=manhattan&image_type=photo&page=1&per_page=10`)
         .then((res) => {
           return res.json();
         })

@@ -1,12 +1,9 @@
 document.addEventListener('DOMContentLoaded', function() {
-  console.log('app.js loaded');
-
   const pixabayAPIService = PixabayAPIService();
   const domService        = DOMService();
 
-
-  pixabayAPIService.getImages(domService.getCarouselContainer())
-
+  pixabayAPIService.getImages(domService.getItemsContainer());
+  domService.getViewPortWidth().addListener(domService.checkViewPortWidth())
 
   domService.getPreviousButton().addEventListener('click', event => {
     event.preventDefault();
@@ -19,61 +16,22 @@ document.addEventListener('DOMContentLoaded', function() {
     getMostCentered();
   });
 
-
-    // Use getBoundingClientRect to for element position.
-    function itemBounds(el) {
-      if (el) {
-        const bound = el.getBoundingClientRect();
-        const width = bound.width;
-        const left = bound.x;
-        const right = left + width;
-        return {left: left, right: right, width: width};
-      }
-    }
-
-  function getMostCentered() {
-    const carousel = document.getElementById('test');
-    const items = carousel.getElementsByTagName('div');
-    // console.log(typeof items);
-
+  const getMostCentered = () => {
+    const items = domService.getCarouselContainer().getElementsByTagName('div');
     // Find center of the carousel
-    const bounds = itemBounds(carousel);
-    // console.log('bounds', bounds);
-
-    const center = bounds.left + (bounds.width / 2);
-    console.log('center', center);
-
+    const bounds = domService.calculateItemBounds(domService.getCarouselContainer());
+    const center = bounds.left + (bounds.width / 2); 
 
     for (var i = 0; i < items.length; i++) {
-      // console.log('items', items);
-      const previous = itemBounds(items[i-1]);
-      const current = itemBounds(items[i]);
-      // console.log('current div', current);
-      const next = itemBounds(items[i+1]);
-      console.log('next', items[i+1]);
-
-
-    // Find the first item whose left edge is past the center 
-      // and compare it with the previous item to see which is closer
+      const current = domService.calculateItemBounds(items[i]);
+      const next = domService.calculateItemBounds(items[i+1]);
+      // Find the first item whose left edge is past the center 
       if ((next && next.left) > center) {
-        console.log('true 1', items[i]);
-
         if ((next.left - center < center) - current.right) {
-            console.log('true 2', items[i+1]);
-
+          console.log(items[i+1]);
             return items[i+1];
-        } else {
-          console.log('else', items[i+1]);
-          return items[i];
-        }
-
-      // If we've hit the last item then it must be closest
-      } else if (!next) {
-        console.log('elseif', items[i+1]);
-        return items[i];
-      }
-
-   }
+        } 
+      } 
+    }
   }
-
 });
