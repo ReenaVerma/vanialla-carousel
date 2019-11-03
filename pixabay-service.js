@@ -13,7 +13,6 @@ function PixabayAPIService() {
 
           let result = '';
           data.hits.forEach(elem => {
-            
             console.log(typeof elem.largeImageURL);
             result +=
                     `<div class="item">
