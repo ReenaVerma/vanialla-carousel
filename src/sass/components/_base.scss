@@ -98,16 +98,16 @@ header {
 
 @media screen and (max-width: 599px) {
     .carousel-container, .items-container {
-        width: 340px;
+        width: 380px;
     }
 
     .item {
-        width: 340px;
-        border: none;
+        width: 380px;
+        border: 0px;
     }
 
     .item img {
-        width: 340px;
+        width: 380px;
         height: 270px;
     }
 }
