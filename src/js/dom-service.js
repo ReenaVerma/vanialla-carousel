@@ -44,7 +44,8 @@ function DOMService() {
       }
 
     const checkViewPortWidth = () => {
-        viewPortWidth.matches ? itemsContainer.style.left = count * 400 + 'px' : itemsContainer.style.left = count * 200 + 'px';
+        console.log('viewPortWidth', viewPortWidth);
+        viewPortWidth.matches ? itemsContainer.style.left = count * 300  + 'px' : itemsContainer.style.left = count * 200 + 'px';
     }
 
     const calculateItemBounds = (el) => {
