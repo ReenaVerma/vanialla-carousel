@@ -71,47 +71,71 @@ header {
   transition: 1s;
 }
 
+/* line 57, src/sass/components/_base.scss */
+.hello {
+  -webkit-animation: pulse 5s infinite;
+          animation: pulse 5s infinite;
+}
+
+@-webkit-keyframes pulse {
+  0% {
+    color: #001F3F;
+  }
+  100% {
+    color: #FF4136;
+  }
+}
+
+@keyframes pulse {
+  0% {
+    color: #001F3F;
+  }
+  100% {
+    color: #FF4136;
+  }
+}
+
 @media screen and (min-width: 1000px) {
-  /* line 58, src/sass/components/_base.scss */
+  /* line 72, src/sass/components/_base.scss */
   .carousel-container, .items-container {
     width: 1000px;
   }
-  /* line 62, src/sass/components/_base.scss */
+  /* line 76, src/sass/components/_base.scss */
   .item {
     width: 20%;
   }
-  /* line 66, src/sass/components/_base.scss */
+  /* line 80, src/sass/components/_base.scss */
   .item img {
     height: 132px;
   }
 }
 
 @media screen and (max-width: 999px) {
-  /* line 72, src/sass/components/_base.scss */
+  /* line 86, src/sass/components/_base.scss */
   .carousel-container, .items-container {
     width: 600px;
   }
-  /* line 76, src/sass/components/_base.scss */
+  /* line 90, src/sass/components/_base.scss */
   .items-container {
     height: 100%;
   }
-  /* line 80, src/sass/components/_base.scss */
+  /* line 94, src/sass/components/_base.scss */
   .item {
     width: 200px;
   }
 }
 
 @media screen and (max-width: 599px) {
-  /* line 86, src/sass/components/_base.scss */
+  /* line 100, src/sass/components/_base.scss */
   .carousel-container, .items-container {
     width: 400px;
   }
-  /* line 90, src/sass/components/_base.scss */
+  /* line 104, src/sass/components/_base.scss */
   .item {
     width: 400px;
     border: none;
   }
-  /* line 95, src/sass/components/_base.scss */
+  /* line 109, src/sass/components/_base.scss */
   .item img {
     width: 400px;
     height: 270px;
