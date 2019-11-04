@@ -6,13 +6,10 @@ body {
 }
 
 header {
-    // background-color: $light-green;
     height: 350px;
-    // border: 1px solid green;
     background-repeat: none;
     max-width: 100%;
     background-size: cover;
-    // background: linear-gradient(to right, rgba(255,0,0,0), rgba(255,0,0,1));
     display: flex;
     align-items: center;
     justify-content: center;
@@ -21,38 +18,33 @@ header {
 .frame {
     margin: 0 auto;
     padding-top: 30px;
-    background-color: #fff;
-    // padding-bottom: 50px;
+    background-color: $white;
 }
 
 .carousel-container {
     position: relative;
     overflow:hidden;
-    // border: 2px solid red;
     margin: 0 auto;
   }
 
 .items-container {
-    // border: 3px solid green;
     height: 270px;
     margin: 0 auto;
     display: flex;
-    position:relative;
-    // white-space:nowrap;
+    position: relative;
 }
 
 .item {
-    // border: 0px solid green;
-    /* width: 20%; */
     margin: 0 auto;
     display: inline-block;
     vertical-align: top;
     justify-content: space-between;
-    padding: 1px;
 }
 
 .item img {
     width: 200px;
+    box-sizing: border-box;
+    border: 2px solid $white;
 }
 .horizTranslate {
     -webkit-transition: 1s;
@@ -62,9 +54,9 @@ header {
     transition: 1s;
 }
 
-@media screen and (min-width: 786px) {
+@media screen and (min-width: 1000px) {
     .carousel-container, .items-container {
-        width: 1011px;
+        width: 1000px;
     }
 
     .item {
@@ -72,15 +64,17 @@ header {
     }
 
     .item img {
-        // width: 400px;
         height: 132px;
-        /* max-height:100%; */
     }
 }
 
-@media screen and (max-width: 785px) {
+@media screen and (max-width: 999px) {
     .carousel-container, .items-container {
-        width: 611px;
+        width: 600px;
+    }
+
+    .items-container {
+        height: 100%;
     }
 
     .item {
@@ -90,20 +84,16 @@ header {
 
 @media screen and (max-width: 599px) {
     .carousel-container, .items-container {
-        width: 411px;
-    }
-
-    .items-container  {
-        height: 400px;
+        width: 400px;
     }
 
     .item {
-        width: 480px;
+        width: 400px;
+        border: none;
     }
 
     .item img {
         width: 400px;
         height: 270px;
-        /* max-height:100%; */
     }
 }

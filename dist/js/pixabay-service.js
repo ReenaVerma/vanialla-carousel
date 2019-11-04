@@ -16,7 +16,7 @@ function PixabayAPIService() {
           data.hits.forEach(elem => {
             console.log(typeof elem.largeImageURL);
             result +=
-                    `<div class="item animated fadeIn slow">
+                    `<div class="item animated fadeIn slow" style="clear: both">
                        <img src="${elem.largeImageURL}" />
                        <p><strong>poster:</strong> <br />${elem.user}</p>
                        <p><strong>tags:</strong> <br />${elem.tags}

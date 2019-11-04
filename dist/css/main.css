@@ -23,21 +23,21 @@ header {
           justify-content: center;
 }
 
-/* line 21, src/sass/components/_base.scss */
+/* line 18, src/sass/components/_base.scss */
 .frame {
   margin: 0 auto;
   padding-top: 30px;
   background-color: #fff;
 }
 
-/* line 28, src/sass/components/_base.scss */
+/* line 24, src/sass/components/_base.scss */
 .carousel-container {
   position: relative;
   overflow: hidden;
   margin: 0 auto;
 }
 
-/* line 35, src/sass/components/_base.scss */
+/* line 30, src/sass/components/_base.scss */
 .items-container {
   height: 270px;
   margin: 0 auto;
@@ -47,74 +47,74 @@ header {
   position: relative;
 }
 
-/* line 44, src/sass/components/_base.scss */
+/* line 37, src/sass/components/_base.scss */
 .item {
-  /* width: 20%; */
   margin: 0 auto;
   display: inline-block;
   vertical-align: top;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  padding: 1px;
 }
 
-/* line 54, src/sass/components/_base.scss */
+/* line 44, src/sass/components/_base.scss */
 .item img {
   width: 200px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  border: 2px solid #fff;
 }
 
-/* line 57, src/sass/components/_base.scss */
+/* line 49, src/sass/components/_base.scss */
 .horizTranslate {
   -webkit-transition: 1s;
   transition: 1s;
 }
 
-@media screen and (min-width: 786px) {
-  /* line 66, src/sass/components/_base.scss */
+@media screen and (min-width: 1000px) {
+  /* line 58, src/sass/components/_base.scss */
   .carousel-container, .items-container {
-    width: 1011px;
+    width: 1000px;
   }
-  /* line 70, src/sass/components/_base.scss */
+  /* line 62, src/sass/components/_base.scss */
   .item {
     width: 20%;
   }
-  /* line 74, src/sass/components/_base.scss */
+  /* line 66, src/sass/components/_base.scss */
   .item img {
     height: 132px;
-    /* max-height:100%; */
   }
 }
 
-@media screen and (max-width: 785px) {
-  /* line 82, src/sass/components/_base.scss */
+@media screen and (max-width: 999px) {
+  /* line 72, src/sass/components/_base.scss */
   .carousel-container, .items-container {
-    width: 611px;
+    width: 600px;
   }
-  /* line 86, src/sass/components/_base.scss */
+  /* line 76, src/sass/components/_base.scss */
+  .items-container {
+    height: 100%;
+  }
+  /* line 80, src/sass/components/_base.scss */
   .item {
     width: 200px;
   }
 }
 
 @media screen and (max-width: 599px) {
-  /* line 92, src/sass/components/_base.scss */
+  /* line 86, src/sass/components/_base.scss */
   .carousel-container, .items-container {
-    width: 411px;
+    width: 400px;
   }
-  /* line 96, src/sass/components/_base.scss */
-  .items-container {
-    height: 400px;
-  }
-  /* line 100, src/sass/components/_base.scss */
+  /* line 90, src/sass/components/_base.scss */
   .item {
-    width: 480px;
+    width: 400px;
+    border: none;
   }
-  /* line 104, src/sass/components/_base.scss */
+  /* line 95, src/sass/components/_base.scss */
   .item img {
     width: 400px;
     height: 270px;
-    /* max-height:100%; */
   }
 }
 
@@ -126,7 +126,7 @@ h1 {
   vertical-align: middle;
 }
 
-/* line 10, src/sass/components/_fonts.scss */
+/* line 8, src/sass/components/_fonts.scss */
 p {
   color: #3f719d;
   text-align: left;
@@ -152,7 +152,7 @@ p {
           align-items: center;
 }
 
-/* line 10, src/sass/components/_buttons.scss */
+/* line 9, src/sass/components/_buttons.scss */
 .buttons button {
   height: 40px;
   width: 110px;
@@ -163,27 +163,10 @@ p {
   font-size: 20px;
 }
 
-/* line 20, src/sass/components/_buttons.scss */
+/* line 19, src/sass/components/_buttons.scss */
 .buttons button:hover {
   border: 1px solid #0099cc;
   background-color: #00aacc;
   color: #ffffff;
   padding: 5px 10px;
-}
-
-/* line 27, src/sass/components/_buttons.scss */
-.buttons button:disabled,
-.buttons button[disabled] {
-  border: 1px solid #999999;
-  background-color: #cccccc;
-  color: #666666;
-}
-
-/* line 35, src/sass/components/_buttons.scss */
-.disable {
-  cursor: not-allowed;
-  pointer-events: painted;
-  border: 1px solid #999999;
-  background-color: #cccccc;
-  color: #666666;
 }
