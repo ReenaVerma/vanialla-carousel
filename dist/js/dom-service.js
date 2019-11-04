@@ -6,12 +6,7 @@ function DOMService() {
     const nextButton        = document.getElementById('next');
     let viewPortWidth       = window.matchMedia("(max-width: 599px)");
     let count               = 0;
-
-    // itemList.width(itemWidth * itemNum);
-
     
-
-
     const getCarouselContainer = () => {
         return carouselContainer;
     }

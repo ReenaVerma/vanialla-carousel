@@ -95,7 +95,7 @@ header {
   }
 }
 
-@media screen and (min-width: 1000px) {
+@media screen and (min-width: 1280px) {
   /* line 72, src/sass/components/_base.scss */
   .carousel-container, .items-container {
     width: 1000px;
@@ -110,7 +110,7 @@ header {
   }
 }
 
-@media screen and (max-width: 999px) {
+@media screen and (max-width: 768px) {
   /* line 86, src/sass/components/_base.scss */
   .carousel-container, .items-container {
     width: 600px;
@@ -128,16 +128,16 @@ header {
 @media screen and (max-width: 599px) {
   /* line 100, src/sass/components/_base.scss */
   .carousel-container, .items-container {
-    width: 400px;
+    width: 340px;
   }
   /* line 104, src/sass/components/_base.scss */
   .item {
-    width: 400px;
+    width: 340px;
     border: none;
   }
   /* line 109, src/sass/components/_base.scss */
   .item img {
-    width: 400px;
+    width: 340px;
     height: 270px;
   }
 }
