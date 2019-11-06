@@ -160,6 +160,7 @@ p {
 /* line 1, src/sass/components/_buttons.scss */
 .buttons {
   padding-top: 20px;
+  padding-bottom: 20px;
   background-color: #eaeee7;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -176,7 +177,7 @@ p {
           align-items: center;
 }
 
-/* line 9, src/sass/components/_buttons.scss */
+/* line 10, src/sass/components/_buttons.scss */
 .buttons button {
   height: 40px;
   width: 110px;
@@ -187,7 +188,7 @@ p {
   font-size: 20px;
 }
 
-/* line 19, src/sass/components/_buttons.scss */
+/* line 20, src/sass/components/_buttons.scss */
 .buttons button:hover {
   border: 1px solid #0099cc;
   background-color: #00aacc;
