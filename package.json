@@ -46,7 +46,11 @@
 		"jshint-stylish": "2.2.1",
 		"lazypipe": "1.0.1",
 		"mocha": "^6.2.2",
-		"node-fetch": "^2.6.0"
+		"node-fetch": "^2.6.0",
+		"should-http": "^0.1.1"
 	},
-	"dependencies": {}
+	"dependencies": {
+		"chai-dom": "^1.8.1",
+		"jsdom": "^15.2.1"
+	}
 }

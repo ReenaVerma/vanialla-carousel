@@ -10,7 +10,6 @@ function PixabayAPIService() {
         })
         .then((data) => {
           console.log('data', data);
-          // console.log(type)
 
           let result = '';
           data.hits.forEach(elem => {
