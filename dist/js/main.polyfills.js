@@ -1,4 +1,4 @@
-/*! project-name v0.0.1 | (c) 2019 YOUR NAME | MIT License | http://link-to-your-git-repo.com */
+/*! project-name v0.0.1 | (c) 2019 YOUR NAME | MIT License | https://github.com/ReenaVerma/vanilla-carousel */
 /**
  * Element.matches() polyfill (simple version)
  * https://developer.mozilla.org/en-US/docs/Web/API/Element/matches#Polyfill

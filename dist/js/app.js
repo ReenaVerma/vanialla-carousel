@@ -1,4 +1,4 @@
-/*! project-name v0.0.1 | (c) 2019 YOUR NAME | MIT License | http://link-to-your-git-repo.com */
+/*! project-name v0.0.1 | (c) 2019 YOUR NAME | MIT License | https://github.com/ReenaVerma/vanilla-carousel */
 document.addEventListener('DOMContentLoaded', (function() {
 	const pixabayAPIService = PixabayAPIService();
 	const domService        = DOMService();
