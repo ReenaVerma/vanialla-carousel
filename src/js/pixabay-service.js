@@ -1,7 +1,7 @@
 function PixabayAPIService() {
-    const searchURL = 'https://pixabay.com/api/';
-    const apikey    = 'a4094594c34f9ac14c7fc4c39';
-    let count               = 0;
+    const searchURL         = 'https://pixabay.com/api/';
+    const apikey            = 'a4094594c34f9ac14c7fc4c39';
+    const itemsContainer    = document.getElementById('items-container');
 
     function getImages(carouselContainer) {
       fetch(`${searchURL}?key=9656065-${apikey}&q=manhattan&image_type=photo&page=1&per_page=9`)
@@ -24,7 +24,7 @@ function PixabayAPIService() {
           });
 
           const carouselItems = carouselContainer.children;
-          
+
           for (let i=0; i < carouselItems.length; i++) {
             carouselItems[i].setAttribute("index", i);
 
@@ -33,16 +33,9 @@ function PixabayAPIService() {
                 let slide = e.currentTarget;
                 let slideWidth = slide.getBoundingClientRect().width;
                 let slideIndex = parseInt(slide.getAttribute("index"));
-                let newLeft = (slideIndex*slideWidth*-1)+Math.floor(((carouselContainer.getBoundingClientRect().width) /slideWidth)/2)*slideWidth;                
+                let newLeft = (slideIndex * slideWidth * -1) + Math.floor(((carouselContainer.getBoundingClientRect().width) / slideWidth) / 2) * slideWidth;
                 document.getElementById("items-container").style.transition= "all 2s ease 0s";
-                document.getElementById("items-container").style.left = newLeft+"px";
-
-                console.log('e.currentTarget', e.currentTarget);
-
-                if (e.currentTarget.attributes.index === 8) {
-                  console.log('true');
-                  carouselContainer.innerHTML = result;
-                }
+                document.getElementById("items-container").style.left = newLeft + "px";
             }
           }
 
