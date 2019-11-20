@@ -105,7 +105,7 @@ However, I would probably utilise `Selennium` for BDD and P3/P4 scenearios.  Suc
 - Test for responsiveness.
 
 
-# **Extras built into the test:**
+# **Extras built into this task:**
 
 - Responsiveness
 - Improved design
@@ -123,17 +123,35 @@ To aid cleaner UX within this test, here are the following enhancements I would 
 	  for (var i = 0; i < items.length; i++) {
 		const current = domService.calculateItemBounds(items[i]);
 		const next = domService.calculateItemBounds(items[i+1]);
-		// Find the first item whose left edge is past the center 
+		// Find the first item whose left edge is past the center
 		if ((next && next.left) > center) {
 		  if ((next.left - center < center) - current.right) {
 			console.log(items[i+1]);
 			  return items[i+1];
-		  } 
-		} 
+		  }
+		}
 	  }
 ```
 4.  I also did not have time to replace arrow buttons, with the provided arrow icons for mobile.  As I wanted to get the core features working and my JavaScript code well structured and cleanly written.
 5. I would also create a new JS file, to host my `checkViewPortWidth(), calculateItemBounds()` and `getMostCentered()` calculations.  And remove these from `dom-service.js` and `app.js`.
+6. I also have written some additional code, where any carousel item you click on, centers in the middle of the `itemsContainer`.  This works, but needs to be better integrated into the current working solution.  (So currently commented out):
+
+```// THIS CODE CENTRES THE CAROUSEL ON CLICK
+          const carouselItems = carouselContainer.children;
+          for (let i=0; i < carouselItems.length; i++) {
+            carouselItems[i].setAttribute("index", i);
+
+            //click handler to center the clicked item
+            carouselItems[i].onclick = function(e) {
+                let slide = e.currentTarget;
+                let slideWidth = slide.getBoundingClientRect().width;
+                let slideIndex = parseInt(slide.getAttribute("index"));
+                let newLeft = (slideIndex * slideWidth * -1) + Math.floor(((carouselContainer.getBoundingClientRect().width) / slideWidth) / 2) * slideWidth;
+                document.getElementById("items-container").style.transition= "all 2s ease 0s";
+                document.getElementById("items-container").style.left = newLeft + "px";
+            }
+          }
+```
 
 
 ## **Instructions**
