@@ -23,25 +23,25 @@ function PixabayAPIService() {
             carouselContainer.innerHTML = result;
           });
 
-          const carouselItems = carouselContainer.children;
-
-          for (let i=0; i < carouselItems.length; i++) {
-            carouselItems[i].setAttribute("index", i);
-
-            //click handler to center the clicked item
-            carouselItems[i].onclick = function(e) {
-                let slide = e.currentTarget;
-                let slideWidth = slide.getBoundingClientRect().width;
-                let slideIndex = parseInt(slide.getAttribute("index"));
-                let newLeft = (slideIndex * slideWidth * -1) + Math.floor(((carouselContainer.getBoundingClientRect().width) / slideWidth) / 2) * slideWidth;
-                document.getElementById("items-container").style.transition= "all 2s ease 0s";
-                document.getElementById("items-container").style.left = newLeft + "px";
-            }
-          }
-
           const backGroundImage = data.hits[1].largeImageURL;
           document.getElementById('header').style.backgroundImage = `linear-gradient(to bottom, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.7)), url(${backGroundImage})`;
           document.getElementById('header').style.backgroundRepeat = 'no-repeat';
+
+          // THIS CODE CENTRES THE CAROUSEL ON CLICK
+          // const carouselItems = carouselContainer.children;
+          // for (let i=0; i < carouselItems.length; i++) {
+          //   carouselItems[i].setAttribute("index", i);
+
+          //   //click handler to center the clicked item
+          //   carouselItems[i].onclick = function(e) {
+          //       let slide = e.currentTarget;
+          //       let slideWidth = slide.getBoundingClientRect().width;
+          //       let slideIndex = parseInt(slide.getAttribute("index"));
+          //       let newLeft = (slideIndex * slideWidth * -1) + Math.floor(((carouselContainer.getBoundingClientRect().width) / slideWidth) / 2) * slideWidth;
+          //       document.getElementById("items-container").style.transition= "all 2s ease 0s";
+          //       document.getElementById("items-container").style.left = newLeft + "px";
+          //   }
+          // }
         });
     }
 

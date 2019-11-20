@@ -1,5 +1,5 @@
 /*! project-name v0.0.1 | (c) 2019 YOUR NAME | MIT License | https://github.com/ReenaVerma/vanilla-carousel */
-@import url("https://fonts.googleapis.com/css?family=Ropa+Sans:400,400i&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Ropa+Sans&display=swap");
 /* line 2, src/sass/components/_base.scss */
 header {
   height: 350px;
@@ -60,7 +60,7 @@ header {
 }
 
 /* line 43, src/sass/components/_base.scss */
-.horizTranslate {
+.scrollAnimation {
   -webkit-transition: 1s;
   transition: 1s;
 }

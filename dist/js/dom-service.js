@@ -29,8 +29,7 @@ function DOMService() {
     const slideImages = (direction) => {
         const totalChildren = itemsContainer.getElementsByTagName('div').length;
         direction === 'left' ? count ++ : count --;
-        itemsContainer.classList.add('horizTranslate');
-        itemsContainer.classList.add("slideOutLeft")
+        itemsContainer.classList.add('scrollAnimation');
 
         previousButton.style.display = count < 0 ? 'block' : 'none';
         nextButton.style.display = count > 5 - totalChildren ? 'block' : 'none';
