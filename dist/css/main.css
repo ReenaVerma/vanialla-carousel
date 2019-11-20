@@ -1,12 +1,6 @@
 /*! project-name v0.0.1 | (c) 2019 YOUR NAME | MIT License | https://github.com/ReenaVerma/vanilla-carousel */
+@import url("https://fonts.googleapis.com/css?family=Ropa+Sans:400,400i&display=swap");
 /* line 2, src/sass/components/_base.scss */
-body {
-  margin: 0;
-  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-  background-color: #eaeee7;
-}
-
-/* line 8, src/sass/components/_base.scss */
 header {
   height: 350px;
   background-repeat: none;
@@ -23,21 +17,21 @@ header {
           justify-content: center;
 }
 
-/* line 18, src/sass/components/_base.scss */
+/* line 12, src/sass/components/_base.scss */
 .frame {
   margin: 0 auto;
   padding-top: 30px;
   background-color: #fff;
 }
 
-/* line 24, src/sass/components/_base.scss */
+/* line 18, src/sass/components/_base.scss */
 .carousel-container {
   position: relative;
   overflow: hidden;
   margin: 0 auto;
 }
 
-/* line 30, src/sass/components/_base.scss */
+/* line 24, src/sass/components/_base.scss */
 .items-container {
   height: 270px;
   margin: 0 auto;
@@ -47,7 +41,7 @@ header {
   position: relative;
 }
 
-/* line 37, src/sass/components/_base.scss */
+/* line 31, src/sass/components/_base.scss */
 .item {
   margin: 0 auto;
   display: inline-block;
@@ -57,7 +51,7 @@ header {
           justify-content: space-between;
 }
 
-/* line 44, src/sass/components/_base.scss */
+/* line 38, src/sass/components/_base.scss */
 .item img {
   width: 200px;
   -webkit-box-sizing: border-box;
@@ -65,13 +59,13 @@ header {
   border: 2px solid #fff;
 }
 
-/* line 49, src/sass/components/_base.scss */
+/* line 43, src/sass/components/_base.scss */
 .horizTranslate {
   -webkit-transition: 1s;
   transition: 1s;
 }
 
-/* line 57, src/sass/components/_base.scss */
+/* line 51, src/sass/components/_base.scss */
 .hello {
   -webkit-animation: pulse 5s infinite;
           animation: pulse 5s infinite;
@@ -96,46 +90,46 @@ header {
 }
 
 @media screen and (min-width: 1280px) {
-  /* line 72, src/sass/components/_base.scss */
+  /* line 66, src/sass/components/_base.scss */
   .carousel-container, .items-container {
     width: 1000px;
   }
-  /* line 76, src/sass/components/_base.scss */
+  /* line 70, src/sass/components/_base.scss */
   .item {
     width: 20%;
   }
-  /* line 80, src/sass/components/_base.scss */
+  /* line 74, src/sass/components/_base.scss */
   .item img {
     height: 132px;
   }
 }
 
 @media screen and (max-width: 1279px) {
-  /* line 86, src/sass/components/_base.scss */
+  /* line 80, src/sass/components/_base.scss */
   .carousel-container, .items-container {
     width: 600px;
   }
-  /* line 90, src/sass/components/_base.scss */
+  /* line 84, src/sass/components/_base.scss */
   .items-container {
     height: 100%;
   }
-  /* line 94, src/sass/components/_base.scss */
+  /* line 88, src/sass/components/_base.scss */
   .item {
     width: 200px;
   }
 }
 
 @media screen and (max-width: 600px) {
-  /* line 100, src/sass/components/_base.scss */
+  /* line 94, src/sass/components/_base.scss */
   .carousel-container, .items-container {
     width: 300px;
   }
-  /* line 104, src/sass/components/_base.scss */
+  /* line 98, src/sass/components/_base.scss */
   .item {
     width: 300px;
     border: 0px;
   }
-  /* line 109, src/sass/components/_base.scss */
+  /* line 103, src/sass/components/_base.scss */
   .item img {
     width: 300px;
     height: 270px;
@@ -143,21 +137,29 @@ header {
 }
 
 /* line 1, src/sass/components/_fonts.scss */
+body {
+  margin: 0;
+  font-family: 'Ropa Sans', sans-serif;
+  background-color: #eaeee7;
+}
+
+/* line 7, src/sass/components/_fonts.scss */
 h1 {
   margin: 0;
   text-align: center;
   color: #fff;
   vertical-align: middle;
+  font-size: 50px;
 }
 
-/* line 8, src/sass/components/_fonts.scss */
+/* line 15, src/sass/components/_fonts.scss */
 p {
   color: #3f719d;
   text-align: left;
-  font-size: 12px;
+  font-size: 18px;
 }
 
-/* line 14, src/sass/components/_fonts.scss */
+/* line 21, src/sass/components/_fonts.scss */
 button {
   color: #fff;
   font-size: 20px;
@@ -201,12 +203,12 @@ button {
 
 /* line 24, src/sass/components/_buttons.scss */
 .buttons #previous {
-  border-top-left-radius: 10px;
-  border-bottom-left-radius: 10px;
+  border-top-left-radius: 8px;
+  border-bottom-left-radius: 8px;
 }
 
 /* line 29, src/sass/components/_buttons.scss */
 .buttons #next {
-  border-top-right-radius: 10px;
-  border-bottom-right-radius: 10px;
+  border-top-right-radius: 8px;
+  border-bottom-right-radius: 8px;
 }

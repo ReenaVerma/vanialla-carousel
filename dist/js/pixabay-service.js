@@ -18,8 +18,8 @@ function PixabayAPIService() {
             result +=
                     `<div class="item animated fadeIn slow">
                        <a href="#"><img src="${elem.largeImageURL}" role="presentation" alt="Image of ${elem.tags}"/></a>
-                       <p><strong>poster:</strong> <br />${elem.user}</p>
-                       <p><strong>tags:</strong> <br />${elem.tags}
+                       <p><strong>user:</strong> <br />${elem.user}</p>
+                       <p><strong>likes:</strong> <br />${elem.likes}
                      </div>`;
             carouselContainer.innerHTML = result;
           });

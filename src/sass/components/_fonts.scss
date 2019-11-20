@@ -1,14 +1,21 @@
+body {
+    margin: 0;
+    font-family: 'Ropa Sans', sans-serif;
+    background-color: $light-green ;
+}
+
 h1 {
     margin: 0;
     text-align: center;
     color: #fff;
     vertical-align: middle;
+    font-size: 50px;
 }
 
 p {
     color: $brand-blue;
     text-align: left;
-    font-size: 12px;
+    font-size: 18px;
 }
 
 button {

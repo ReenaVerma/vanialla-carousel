@@ -57,13 +57,13 @@ describe('1) Check for succcessful fetech API call', () => {
     })
   })
 
-  it('d) Expect API response to contain object key "tags"', async () => {
+  it('d) Expect API response to contain object key "likes"', async () => {
     await fetch('https://pixabay.com/api/?key=9656065-a4094594c34f9ac14c7fc4c39&q=manhattan&image_type=photo&page=1&per_page=9')
     .then((res) => {
       return res.json()
     })
     .then((res) => {
-      const imageTags = res.hits.map(x => ({largeImageURL: x.tags}));
+      const imageTags = res.hits.map(x => ({largeImageURL: x.likes}));
       expect(imageTags).to.have.lengthOf(9);
     })
   })
