@@ -157,6 +157,12 @@ p {
   font-size: 12px;
 }
 
+/* line 14, src/sass/components/_fonts.scss */
+button {
+  color: #fff;
+  font-size: 20px;
+}
+
 /* line 1, src/sass/components/_buttons.scss */
 .buttons {
   padding-top: 20px;
@@ -183,15 +189,24 @@ p {
   width: 110px;
   margin: 0 auto;
   background-color: #3f719d;
-  border-radius: 5px;
-  color: #fff;
-  font-size: 20px;
 }
 
-/* line 20, src/sass/components/_buttons.scss */
+/* line 17, src/sass/components/_buttons.scss */
 .buttons button:hover {
   border: 1px solid #0099cc;
   background-color: #00aacc;
   color: #ffffff;
   padding: 5px 10px;
+}
+
+/* line 24, src/sass/components/_buttons.scss */
+.buttons #previous {
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+}
+
+/* line 29, src/sass/components/_buttons.scss */
+.buttons #next {
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
 }
